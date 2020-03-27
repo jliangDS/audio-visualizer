@@ -1,13 +1,46 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Audio Visualizer</title>
 
-    <script type="text/javascript" src="script.js"></script>
-    <style>
-    </style>
-</head>
-<body onload="initPage()">
-    <canvas id="renderer"></canvas>
-</body>
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>Audio Visualizer</title>
+
+        <script type="text/javascript" src="audio.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div>
+            <form>
+                <div>
+                    <label for="text">Input Text</label>
+                    <input type="text" id="text" required>
+                </div>
+
+                <div>
+                    <label for="minmaxlength">Text with Min and Max Length</label>
+                    <input type="text" id="minmaxlength" minlength="3" maxlength="12">
+                </div>
+
+                <div>
+                    <label for="password">Password (must contain at least 1 uppercase character, 1 lowercase character, and 1 number)</label>
+                    <input type="password" id="password" pattern="[A-Za-z]{3}" required>
+                </div>
+
+                <input type="submit" class="button" value="Submit">
+            </form>
+        </div>
+
+        <div id="box">
+            <canvas id="visual"></canvas>
+
+            <audio controls>
+                <source id="audio" src="Dee_Yan-Key_-_04_-_Vivace_con_spirito.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+    </body>
+
 </html>
